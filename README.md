@@ -28,6 +28,12 @@ Develop a modern data warehouse to consolidate sales data, enabling analytical r
 ### Data Architect Design
 
 This data warehouse follows Medallion Architecture &rarr; Designing a data warehouse with 3 layers entitled as **`Bronze`**, **`Silver`**, and **`Gold`**:
+|                 | Bronze layer                                      | Silver layer                                            | Gold layer                                           |
+| :-------------- | :------------------------------------------------ | :------------------------------------------------------ | :--------------------------------------------------- |
+| **Definition** | Raw, unprocessed data as-is from sources          | Clean & standardized data                               | Business-ready data                                  |
+| **Objective** | Traceability & Debugging                          | (Intermediate layer) Prepare Data for analysis          | Provide data to be consumed for reporting & analytics |
+| **Object type** | Tables                                            | Tables                                                  | Views only                                           |
+| **Stakeholders**| Data Engineer                                     | Data Engineer <br> Data Analyst                         | Data Analyst <br> Business stakeholder               |
 
 ![Data Architecture Design](docs/data_architecture.webp)
 
